@@ -1,0 +1,41 @@
+MAIN----------->
+
+package Array;
+
+import java.util.ArrayList;
+
+public class list2 {
+    public static void main(String []args){
+        stu s1=new stu("meow",13,"CSE");
+        stu s2=new stu("mini",33,"ECE");
+        stu s3=new stu("NIVI",3,"EEE");
+        ArrayList<stu> arr=new ArrayList<>();
+
+        arr.add(s1);
+        arr.add(s2);
+        arr.add(s3);
+        for(stu list:arr){
+            list.dep();
+        }
+    }
+}
+____________________________________________________________________________________
+METHOD----->
+
+package Array;
+
+public class stu {
+ String name;
+ int rollno;
+ String department;
+ public stu(String name,int rollno,String department){
+     this.name=name;
+     this.rollno=rollno;
+     this.department=department;
+    }
+    public void dep(){
+        System.out.println("name:"+name);
+        System.out.println("rollno:"+rollno);
+        System.out.println("department:"+department);
+    }
+}
