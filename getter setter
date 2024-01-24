@@ -1,0 +1,20 @@
+package getter;
+
+public class loginnn {
+    private String username="meow";
+    private String password="sunflower";
+
+    public void loginn(String username,String password){
+        if(this.username.equals(username)) {
+            if(this.password.equals(password)) {
+                System.out.println("logged in");
+            } else {
+
+                System.out.println("Incorrect password");
+            } }else  {
+                System.out.println("incorrect name");
+            }
+
+    }
+
+}
