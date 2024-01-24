@@ -39,3 +39,14 @@ public class stu {
         System.out.println("department:"+department);
     }
 }
+------------------------------------------------------------------------------------------
+OUTPUT---
+name:meow
+rollno:13
+department:CSE
+name:mini
+rollno:33
+department:ECE
+name:NIVI
+rollno:3
+department:EEE
