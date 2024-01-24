@@ -1,0 +1,25 @@
+package Array;
+
+public class obj {
+    public static void main(String[]args){
+        student s1=new student();
+        s1.getdata("meow",12);
+        obj(s1);
+    }
+
+    public static void obj(student a)
+    {
+        System.out.println(a.name);
+        System.out.println(a.rollno);
+    }
+}
+------------------------------------------------------------------
+package Array;
+
+public class student {
+    String name;
+    int rollno;
+    public void getdata(String name, int rollno){
+     this.name=name;
+     this.rollno=rollno;
+}}
