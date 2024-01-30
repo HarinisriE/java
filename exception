@@ -1,0 +1,18 @@
+package try_catch;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class exception {
+    public static void main(String[] args) {
+        int num1,num2;
+        Scanner s1=new Scanner(System.in);
+        try{
+            System.out.println("Enter the value 1:" );
+            num1=s1.nextInt();
+            System.out.println("Enter the value 2:");
+            num2=s1.nextInt();
+            System.out.println(num1/num2);
+
+        }catch(InputMismatchException err){
+            System.out.println(err);
