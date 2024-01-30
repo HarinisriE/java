@@ -1,0 +1,41 @@
+package simpleGUI;
+
+
+
+import javax.swing.*;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class login  implements ActionListener {
+    JFrame frame=new JFrame();
+    JLabel label=new JLabel();
+    JTextField UserIDField=new JTextField();
+    JButton button=new JButton("click me");
+
+    public login (){
+        label.setBounds(10,20,200,40);
+        button.setBounds(10,60,175,30);
+        button.addActionListener(this);
+        label.setBounds(100,500,200,20);
+        UserIDField.setBounds(200,60,200,30);
+        frame.add(label);
+        frame.add(UserIDField);
+        frame.add(button);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(600,600);
+        frame.setLayout(null);
+        frame.setVisible(true);
+
+    }
+    public void actionPerformed(ActionEvent e){
+        String text;
+        if(e.getSource()==button){
+            text=UserIDField.getText();
+            label.setText(text);
+            int data=Integer.parseInt(text);
+            System.out.println(data+data);
+        }
+    }
+}
