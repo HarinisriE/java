@@ -1,0 +1,37 @@
+package threadd;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class gui {
+    JFrame frame = new JFrame("timer");
+    JLabel l1 = new JLabel("meow");
+
+    public gui() {
+        l1.setBounds(100, 100, 200, 40);
+        l1.setFont(new Font("normal", Font.BOLD, 30));
+        frame.add(l1);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 300);
+        frame.setLayout(null);
+        frame.setVisible(true);
+        timeChange();
+    }
+
+    public void timeChange() {
+        int i = 0;
+        while (true) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            i++;
+            l1.setText("time is-" + i);
+        }
+    }
+
+    public static void main(String[] args) {
+        new gui();
+    }
+}
